@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Pranav Ladkat - University at Buffalo</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="index.html">Pranav Ladkat<span class="logo_colour"></span></a></h1>
+          <h2>Graduate Student, Mechanical Engineering</h2>
+          <h2>University at Buffalo, The State University of New York.</h2>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li><a href="index.html">Home</a></li>
+          <!-- <li><a href="academics.html">Academic Background</a></li> -->
+          <li><a href="workex.html">Work ExperiEnce</a></li>
+          <li class="selected"><a href="projects.html">Projects</a></li>
+          <li><a href="info_links.html">Useful Info and Links</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="site_content">
+      <div id="contentfull">
+        <!-- insert the page content here -->
+        <h2>3D Unsteady Vortex Panel Method</h2>
+        <p>This project is still in active development. I'm developing a general purpose 3D Unsteady Vortex Panel method as a part of my <strong>Master's Project</strong>. Vortex Panel Method is widely used in the early design of streamlined bodies such as airfoils. The method gives fairly accurate results of pressure, drag and lift forces and moments on the body. The motivation of the present work is to take advantage of fast solution time of the this method and use it in real time control feedback system of a wind turbine.</p>
+        <p> The method is constant strength Source-Doublet Panel Method. The present code is developed in a object oriented C++ making use of modern C++ features. </p>
+        <p>Source Code : <a href="https://github.com/pranavladkat/3dVPM"><img src="IMG/git_logo.png"  alt="https://github.com/pranavladkat/Multiphase-Flow-Solver_Level-Set-Method" width="37" height="34" title="https://github.com/pranavladkat/Multiphase-Flow-Solver_Level-Set-Method"/></a></p>
+        <p align="center"><a href="IMG/3dPanel.png"><img src="IMG/3dPanel.png" width="720"></a></p>
+        <p align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/qHFivq2sE6M" frameborder="0" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/kPSzigbN_gE" frameborder="0" allowfullscreen></iframe></p>
+        
+        <h2>2D Plane Stress Analysis using Finite Element Method</h2>
+        <p>I developed this code to solve 2D plane stress problem as a part of course project for <strong>&quot;Finite Element Methods&quot;</strong> in Fall 2014. The code is written in C++ making use of its OOP concepts.</p>
+        <p>The Plane Stress is a simplification of the elastostatic problem when the stress vector is zero across a particular surface. A bilinear quadrilateral element is implemented   and 2 point Gaussian Quadrature is used to solve the integration numerically. The code can import geometry in an unstructured mesh file format which defines geometry and boundary conditions. The current code is validated with ANSYS APDL commercial package and the solution is matched  within tolerance of 1E-4 units.</p>
+        <p>Source Code : <a href="https://github.com/pranavladkat/2dFEA"><img src="IMG/git_logo.png"  alt="https://github.com/pranavladkat/Multiphase-Flow-Solver_Level-Set-Method" width="37" height="34" title="https://github.com/pranavladkat/Multiphase-Flow-Solver_Level-Set-Method"/></a></p>
+        <p>Detailed project report : <a href="files/mae529_pranavpr_project-report.pdf" title="Simulating Two-Phase Incompressible Flow using Level Set Method">PDF</a></p>
+        <p>Solution to the some of the example problems shown below.</p>
+        <p align="center"><a href="IMG/2dFEA-4x4Quad.png"><img src="IMG/2dFEA-4x4Quad.png" alt="" width="620"></a></p>
+        <p align="center"><a href="IMG/2dFEA-disp.png"><img src="IMG/2dFEA-disp.png" width="620"></a></p>
+        <p align="center">&nbsp;</p>
+        
+        <h2>Simulating Two-Phase Incompressible Flow using Level Set Method        </h2>
+        <p align="justify">I developed a two-phase flow solver as a part of course project for &quot;<strong>Computational Moving Interfaces</strong>&quot; during summer 2014. The code is written in C making use of <a href="http://www.mcs.anl.gov/petsc/">PETSc</a> library.</p>
+        <p align="justify">The code utilizes second order Projection Method with variable density and viscosity to solve the incompressible flow field. A collocated grid is opted for the current work. The interface between two phases is sharp and tracked with the zero level set of smooth function. The projection step is solved using GMRES solver. The Godunov method is used for solving reinitialization and level set advection   equations. Uses adaptive time-stepping to advance in time.  Continuum Surface Force is used for modeling Surface Tension.</p>
+        <p>Source Code : <a href="https://github.com/pranavladkat/Multiphase-Flow-Solver_Level-Set-Method"><img src="IMG/git_logo.png"  alt="https://github.com/pranavladkat/Multiphase-Flow-Solver_Level-Set-Method" width="37" height="34" title="https://github.com/pranavladkat/Multiphase-Flow-Solver_Level-Set-Method"/></a></p>
+        <p>Detailed project report : <a href="files/multiphase-levelset.pdf" title="Simulating Two-Phase Incompressible Flow using Level Set Method">PDF</a></p>
+        <p>The classical problem of Rising Bubble and curvature effects in zero gravity is simulated: </p>
+        <p align="center"><iframe width="408" height="452" src="http://www.youtube.com/embed/dsthUeX7jyY" frameborder="0" allowfullscreen></iframe>
+        <iframe width="408" height="452" src="http://www.youtube.com/embed/_KhHKFxKOnM" frameborder="0" allowfullscreen></iframe></p>
+        <h2>&nbsp;</h2>       
+        <h2>Parallel SOR using MPI, OpenMP and CUDA</h2>
+        <p align="justify">The program solves a generic Poisson Equation using Red-Black Successive Over Relaxation method. The aim of the program is to take advantage of multiple processors using MPI, OpenMP and CUDA. This project is done for a &quot;<strong>High Performance Computing</strong>&quot; course in Fall 2014.</p>
+        <p align="justify"> The code is written in object oriented C++ to mimic a behavior of a numerical library. Code lets user set up a Poisson Equation such as coefficients and right hand side function, Grid parameters, Boundary Conditions via user defined functions, solver parameters such as solver type, tolerance etc. and then solves it. The MPI and OpenMP solver achieves a nearly linear speedup when number of processors are increased. The CUDA code achieves speedup up to ~50 compared to 1 CPU and ~5 compared to 16 processors.</p>
+        <p align="justify">Source Code : <a href="https://github.com/pranavladkat/SOR">MPI &amp; OpenMP</a>, <a href="https://github.com/pranavladkat/cudaSOR/blob/master/cudaSOR.cu">CUDA</a></p>
+        <p align="justify">Detailed project report : <a href="files/mae609-project-report-pranavpr.pdf" title="Simulating Two-Phase Incompressible Flow using Level Set Method">PDF</a>        </p>
+        <p align="center"><a href="IMG/sor-800.png"><img src="IMG/sor-800.png" alt="" width="820"></a></p>
+        <p align="center"><a href="IMG/sor-4096.png"><img src="IMG/sor-4096.png" alt="" width="620"></a></p>
+        <p align="center">&nbsp;</p>
+       
+        <h2>2D Flow Simulations using Lattice Boltzmann Method</h2>
+        <p>Developed a C++ code to solve 2D incompressible flow using Lattice Boltzmann method. Uses D2Q9 lattice model with BGK collision operator. Code is validated with classical cavity flow problem.</p>
+        <p>Source Code : <a href="https://github.com/pranavladkat/LBM"><img src="IMG/git_logo.png"  alt="https://github.com/pranavladkat/Multiphase-Flow-Solver_Level-Set-Method" width="37" height="34" title="https://github.com/pranavladkat/Multiphase-Flow-Solver_Level-Set-Method"/></a></p>
+        <h2>Incompressible Navier-Stokes flow solver in Curvilinear Coordinates using C++</h2>
+        <p>I developed a Navier Stokes Flow solver in Curvilinear Coordinates as a course project for &quot;CFD-II&quot; in spring 2014. The code uses<strong> Artificial Compressibility Method</strong> for pressure-velocity coupling. The code is second order accurate in space and fourth order accurate in time due to use of 4th order Runge-Kutta. The code can be used with stretched grids and curved grids. The code is validated with examples of Cavity flow and Backward facing step problems.</p>
+        <p align="center"><a href="IMG/cavity.png"><img src="IMG/cavity.png" width="720"></a></p>
+        <p align="center"><a href="IMG/backstep.png"><img src="IMG/backstep.png" width="820"></a></p>
+        <h2>Numerical Methods for Capturing Shocks</h2>
+        <p> The hyperbolic equations with the shocks in its initial condition are solved with some of the conservative schemes such as  <strong>Godunov Method, Godunov Method with MUSCL scheme</strong> and <strong>Modified Runge-Kutta with TVD</strong>. The classical problem of Dam-Break problem (1D) is simulated. The code is implemented in MATLAB. The project was a part of CFD-I course.</p>
+        <h2>Solution to Elliptical PDE's using SOR and ADI</h2>
+        <p>The Elliptic PDE's in 2D are solved using iterative methods such as <strong>Successive Over Relaxation</strong> and <strong>Alternating Direction Implicit</strong> methods. Used MATLAB for implementing these methods. The project was a part of CFD-I course.</p>
+        <h2>SAE BAJA</h2>
+        <p>I participated in my college's team for SAE BAJA 2010. We designed, fabricated an All Terrain Vehicle and raced with  80 teams from all over India. Our team secured <strong>4th</strong>/80 teams in the race. I was responsible for designing roll-cage of the vehicle. I used CATIA V5 for the design purpose and used ANSYS Mechanical to test the rigidity of the structure by performing various bump tests. </p>
+        <p align="center"><a href="IMG/SAE_baja.jpg"><img src="IMG/SAE_baja.jpg" width="720" height="406"  alt=""/></a></p>
+        <h2>ROBOCON</h2>
+        <p>I also participated in ROBOCON (an Asia level Robotics Competition). The aim of the event is to design and fabricate 2 autonomous and 1 manual robot which will do certain task in coordination. I was responsible for designing and fabricating all three robots. </p>
+      </div>
+    </div>
+    <div id="footer">
+      Copyright &copy; textured_blue | <a href="http://validator.w3.org/check?uri=referer">HTML5</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> | <a href="http://www.html5webtemplates.co.uk">Free CSS Templates</a>
+    </div>
+  </div>
+</body>
+</html>
